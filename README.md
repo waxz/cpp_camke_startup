@@ -5,12 +5,13 @@ step
 make clean
 mkdir build
 cd build
-cmake ..
+cmake -DCMAKE_INSTALL_PREFIX=/tmp/t2 ..
 make package
 sudo dpkg -i example-3.3.0.deb
 
-binary file will be installed in /usr/bin
-library wiil be install in /usr/lib
+DCMAKE_INSTALL_PREFIX 默认 /usr/local
+CPACK_PACKAGING_INSTALL_PREFIX=CMAKE_INSTALL_PREFIX
+
 
 run with : /usr/bin/example
 reference_links:
