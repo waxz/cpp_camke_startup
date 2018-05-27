@@ -1,8 +1,11 @@
 cpp_cmake startup
 
 step
+
 make clean
-cmake .
+mkdir build
+cd build
+cmake ..
 make package
 sudo dpkg -i example-3.3.0.deb
 

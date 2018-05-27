@@ -148,7 +148,7 @@ install (TARGETS ${PROJECT_NAME}
 # This is basically a repeat of the file copy instruction that copies the
 # resources in the build directory, but here we tell cmake that we want it
 # in the package.
-#install(DIRECTORY resources DESTINATION ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
+install(DIRECTORY resources DESTINATION bin/${PROJECT_NAME}_resources)
 
 
 
