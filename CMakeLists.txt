@@ -92,12 +92,11 @@ set_target_properties(${PROJECT_NAME}_lib PROPERTIES
         )
 install(TARGETS ${PROJECT_NAME}_lib
         EXPORT ${PROJECT_NAME}_lib
-        RUNTIME DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
-        LIBRARY DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
-        ARCHIVE DESTINATION ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION lib
         )
 install(DIRECTORY include/${PROJECT_NAME}/
-        DESTINATION ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/${PROJECT_NAME}
+        DESTINATION lib/${PROJECT_NAME}
         FILES_MATCHING PATTERN "*.h"
         )
 
@@ -117,7 +116,7 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
         )
 
 install (TARGETS ${PROJECT_NAME}
-        DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+        DESTINATION bin)
 
 ###############################################################################
 ## packaging ##################################################################
