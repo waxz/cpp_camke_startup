@@ -27,7 +27,7 @@ int main ()
     //ensure that called_from_async is launched synchronously
     bool x = fut.get();     // retrieve return value
 
-    std::cout << "\n444444443 " << (x?"is":"is not") << " prime.\n";
+    std::cout << "\n444444443 " << (x?"is":"is not") << " prime.\n22";
 
     return 0;
 }
